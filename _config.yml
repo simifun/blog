@@ -3,12 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: simi
-subtitle:
-description:  Simi,for fun!
+title: Simi's Blog
+subtitle: 
+description: 
 author: simi
-language:  zh-Hans
+language: zh-Hans
 timezone:
+
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
