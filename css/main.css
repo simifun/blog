@@ -2082,7 +2082,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffd083;
+  background: #fff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3109,7 +3109,6 @@ img:hover {
   width: 240px;
   color: #555;
   background: #fff;
-  background: rgba(255,255,255,0.75) none repeat scroll !important;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
   border-radius: initial;
   opacity: 0;
@@ -3120,6 +3119,9 @@ img:hover {
 }
 .sidebar-inner.affix-bottom {
   position: absolute;
+}
+.sidebar-inner {
+  background: rgba(255,255,255,0.75) none repeat scroll !important;
 }
 .site-overview {
   margin: 2 0px;
