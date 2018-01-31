@@ -298,11 +298,10 @@ img {
   height: auto;
 }
 hr {
-  margin: 40px 0;
-  height: 3px;
-  border: none;
+  height: 1px;
+  border: 0;
   background-color: #ddd;
-  background-image: repeating-linear-gradient(-45deg, #fff, #fff 4px, transparent 4px, transparent 8px);
+  margin-bottom: 1.5em;
 }
 blockquote {
   padding: 0 15px;
@@ -2067,7 +2066,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #3934ff;
+  background: #c252a8;
 }
 .links-of-blogroll {
   font-size: 13px;
