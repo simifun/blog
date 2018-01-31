@@ -2082,7 +2082,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #00d9b3;
+  background: #a44726;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3122,7 +3122,8 @@ img:hover {
   position: absolute;
 }
 .site-overview {
-  text-align: left;
+  margin: 0 2px;
+  font-weight: bold;
 }
 .site-author:before,
 .site-author:after {
