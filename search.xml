@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Android Studio,记一次难忘的Error]]></title>
-    <url>%2F2018%2F01%2F31%2FAndroid-Studio-%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%9A%BE%E5%BF%98%E7%9A%84Error%2F</url>
-    <content type="text"><![CDATA[今天打开上周才运行过的Android项目,意想不到的错误出现了： Could not find method ?apply()for arguments [{plugin=com.android.application}]…… 同样的 Gradle报错:Gradle DSL method not found: ‘apply()’…… 当时的环境及版本信息： Android Studio版本3.0 build.gradle(工程根目录) 版本3.0.0 gradle-wrapper.properties:distributionUrl=https\://services.gradle.org/distributions/gradle-4.1-all.zip` 点击Message定位到某module下的build.gradle文件的第一行:apply plugin: ‘com.android.application’ 本来以为靠着万能的google就能很快解决问题，结果莫名其妙就耽误了半个下午. 尝试过的解决方案： 删除allprojects后边的生成的多余android {……}，dependencies{……} 更改根目录下build.gradle中的classpath的gradle版本 svn diff/svn update 将Android studio版本降到2.4再尝试上述过程 …… 全军覆没，就差最后一步delete之，然后svn checkout重建项目了。 现在想想真是浪费时间啊，为了增强一下记忆，我把这个错误记下来分享一下。 究极解决方案就是 复制对应moudle下的build.gradle内容，删除掉该build.gradle文件，新建之，粘贴之,最后rebuild一下，应该就没有什么问题了。]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Android Studio</category>
-      </categories>
-      <tags>
-        <tag>Could not find method</tag>
-        <tag>Gradle DSL method not found</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[next主题配置透明色等]]></title>
     <url>%2F2018%2F01%2F31%2Fnext%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E9%80%8F%E6%98%8E%E8%89%B2%E7%AD%89%2F</url>
     <content type="text"><![CDATA[写在前面博客搭建基础相关、hexo安装配置、next主题安装配置等可以参考这两篇文章： 从零开始搭建个人博客: 建立博客系列更炫酷的效果看这个: hexo的next主题个性化教程:打造炫酷网站 这篇博文主要对next主题配置做一些简单的补充，我用的主题是Next.Gemini v6.0.0版本，所以本文多是关于此主题背景色的修改等。具体效果可以查看我的博客以下命名可能不准确，同学们可以参照我截的一张图：其他next主题大同小异，找不到修改文件的同学可以留言。 背景色透明文章背景色透明打开文件themes/next/source/css/_schemes/Gemini/index.styl，找到1234567// Post &amp; Comments blocks..post-block &#123; padding: $content-desktop-padding; background: white; box-shadow: $box-shadow-inner; border-radius: $border-radius-inner;&#125; 在其后加入一段：123.post-block &#123; background: rgba(255,255,255,.75) none repeat scroll !important;&#125; Tips：这里掌握css的同学应该知道rgba的第四个参数就是改变透明度的，越接近0透明度越高，大家可以自行选择。之后hexo g，hexo d 打开博客即可看到文章背景板已经变透明了。 评论区背景色透明评论区背景色设置同上 文章背景色透明，进入同一级目录，打开index.styl，与前面不同的是你需要找到.comment{…}，同样的在其后插入刚才一样的代码，注意此处插入的样式名是comment。 头部空隙设置Next.Gemini默认的头部空隙是黑色的，它的配置代码在themes/next/source/css/_variables/base.styl的200多行处1234// Headband// --------------------------------------------------$headband-height = 3px$headband-bg = transparent 在这里调整头部空隙的高度和背景色，我将背景色设置成了透明。 标题区设置标题背景色设置代码在/next/source/css/_schemes/Pisces/_brand.styl，找到123456789101112.site-meta &#123; padding: 20px 0; color: white; background: rgba(0,0,0,.3); +tablet() &#123; box-shadow: 0 0 16px rgba(0,0,0,.5); &#125; +mobile() &#123; box-shadow: 0 0 16px rgba(0,0,0,.5); &#125;&#125; 其中background即为title背景色，我这里是设置成黑色透明。 标题字体设置，在themes/next/source/css/_custom/custom.styl中添加如下代码：12345678@font-face &#123; font-family: simi; src: url('/fonts/simi.otf');&#125;.site-title &#123; font-size: 40px !important; font-family: 'simi' !important;&#125; 侧栏概览设置圆形头像设置在本文开头的 打造炫酷网站。 刚刚设置到这一步的同学看到的侧栏图： 可能看到的不是这个样子，不要急，那是因为你的“分类”和“标签”都还是空的，发一篇文章打上标签并分类，之后hexo g,hexo d就能看见了。 透明背景设置，类似于文章背景色透明，在themes/next/source/css/_schemes/Pisces/_sidebar.styl中找到.sidebar-inner {…}在其后添加上面提过的透明样式代码。这里需要注意一下，有些同学在侧栏开启了”显示当前垂直位置百分比”scrollpercent或者”点击回到顶部”b2t功能之后，会出现下拉到顶部透明才产生作用的现象，此时可以尝试 进入themes/next/source/css/_variables/Gemini.styl将$body-bg-color设置为transparent(透明)。 （scrollpercent、b2t这两个功能在主题配置文件themes/next/_config.yml设置，如下：）]]></content>
