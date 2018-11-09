@@ -17,7 +17,7 @@ copyright: true
 
 这篇博文主要对next主题配置做一些简单的补充，我用的主题是`Next.Gemini v6.0.0`版本，所以本文多是关于此主题背景色的修改等。具体效果可以查看[我的博客](https://simi.fun/)  
 以下命名可能不准确，同学们可以参照我截的一张图：
-![ ](next主题配置透明色等/1.png)其他next主题大同小异，找不到修改文件的同学可以留言。
+![ ](1.png)其他next主题大同小异，找不到修改文件的同学可以留言。
 
 # 背景色透明
 ## <span id="post-block">文章背景色透明</span>
@@ -83,7 +83,7 @@ $headband-bg                    = transparent
 圆形头像设置在本文开头的 [打造炫酷网站](http://shenzekun.cn/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html)。
 
 刚刚设置到这一步的同学看到的侧栏图： <div align=center>
-![图片描述](next主题配置透明色等/2.png)
+![图片描述](2.png)
 </div>可能看到的不是这个样子，不要急，那是因为你的“分类”和“标签”都还是空的，发一篇文章打上标签并分类，之后hexo g,hexo d就能看见了。
 
 透明背景设置，类似于[文章背景色透明](#post-block)，在`themes/next/source/css/_schemes/Pisces/_sidebar.styl`
@@ -91,5 +91,5 @@ $headband-bg                    = transparent
 > 进入`themes/next/source/css/_variables/Gemini.styl`将`$body-bg-color`设置为`transparent`(透明)。
 
 （`scrollpercent`、`b2t`这两个功能在主题配置文件`themes/next/_config.yml`设置，如下：）<div align=center>
-![图片描述](next主题配置透明色等/3.png)
+![图片描述](3.png)
 </div>
