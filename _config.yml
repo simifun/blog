@@ -80,6 +80,7 @@ theme: next
 deploy:
   type: git
   repository:
-    coding: git@git.coding.net:X-Song/blog.git
+ ##   coding: git@git.coding.net:X-Song/blog.git
+    github: git@github.com:simifun/blog.git
   branch: master
 
