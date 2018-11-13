@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[浅谈同步、异步与阻塞、非阻塞]]></title>
+    <url>%2F2018%2F11%2F12%2F%E6%B5%85%E8%B0%88%E5%90%8C%E6%AD%A5%E3%80%81%E5%BC%82%E6%AD%A5%E4%B8%8E%E9%98%BB%E5%A1%9E%E3%80%81%E9%9D%9E%E9%98%BB%E5%A1%9E%2F</url>
+    <content type="text"><![CDATA[同步与异步同步与异步这两个概念，大多数情况下都是关注消息通信机制 (synchronous communication/ asynchronous communication)。简而言之同步与异步的区分就是看消息通知的差别。 概念描述所谓同步，就是当前线程在发起一个调用时，没有得到结果之前，该调用就不返回。一旦调用返回，此线程就得到返回值了。换句话说，就是由调用者主动等待这个调用的结果。]]></content>
+      <categories>
+        <category>程序员的自我修养</category>
+      </categories>
+      <tags>
+        <tag>同步</tag>
+        <tag>异步</tag>
+        <tag>阻塞</tag>
+        <tag>非阻塞</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[程序员的自我修养]]></title>
+    <url>%2F2018%2F11%2F12%2F%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB%2F</url>
+    <content type="text"><![CDATA[写在前面无论是笔试、面试还是日常工作中总是会遇到同步、异步、并行、并发、多线程等等的问题，在做简单的项目的时候也不会过于关心这些感念，只管会用就行，其实仔细想想自己对这些概念其实还是没有完全清晰的认识，说了解也了解，总能说上几句听起来不错的话，但是禁不起刨根问底，尤其是再加上阻塞、非阻塞等概念之后，一时间总感觉信息量太大处理不过来。查看了许多前辈的讲解之后对这些东西也有一些浅薄的理解，现在记录下来，日后忘之也好来寻。 汇总链接计算机网络相关 hexo的next主题个性化教程:打造炫酷网站 操作系统相关hexo的next主题个性化教程:打造炫酷网站 Android相关hexo的next主题个性化教程:打造炫酷网站]]></content>
+      <categories>
+        <category>程序员的自我修养</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[Android Studio,记一次难忘的Error: Could not find method ?apply() for arguments]]></title>
     <url>%2F2018%2F01%2F31%2FAndroid-Studio-%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%9A%BE%E5%BF%98%E7%9A%84Error%2F</url>
     <content type="text"><![CDATA[今天打开上周才运行过的Android项目,意想不到的错误出现了： Could not find method ?apply()for arguments [{plugin=com.android.application}]…… 同样的 Gradle报错:Gradle DSL method not found: ‘apply()’…… 当时的环境及版本信息： Android Studio版本3.0 build.gradle(工程根目录) 版本3.0.0 gradle-wrapper.properties:distributionUrl=https\://services.gradle.org/distributions/gradle-4.1-all.zip` 点击Message定位到某module下的build.gradle文件的第一行:apply plugin: ‘com.android.application’ 本来以为靠着万能的google就能很快解决问题，结果莫名其妙就耽误了半个下午. 尝试过的解决方案： 删除allprojects后边的生成的多余android {……}，dependencies{……} 更改根目录下build.gradle中的classpath的gradle版本 svn diff/svn update 将Android studio版本降到2.4再尝试上述过程 …… 全军覆没，就差最后一步delete之，然后svn checkout重建项目了。 现在想想真是浪费时间啊，为了增强一下记忆，我把这个错误记下来分享一下。 究极解决方案就是 复制对应moudle下的build.gradle内容，删除掉该build.gradle文件，新建之，粘贴之,最后rebuild一下，应该就没有什么问题了。]]></content>
