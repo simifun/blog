@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Java开发环境配置]]></title>
     <url>%2F2018%2F11%2F13%2FJava%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%2F</url>
-    <content type="text"><![CDATA[目录 前言 下载安装 配置环境变量 测试 前言在Java中，类库以包（package）的形式提供，不同版本的Java提供不同的包，以面向特定的应用。Java2平台包括标准版（J2SE）、企业版（J2EE）和微缩版（J2ME）三个版本。 Java SE(Java Platform,Standard Edition)。JavaSE以前称为J2SE.它允许开发和部署在桌面、服务器、嵌入式环境和实施环境中使用的Java应用程序。JavaSE 包括支持Java Ｗeb服务开发的类，并为Java Platform,Enterprise Edition(Java EE)提供基础。 Java EE(Java Platform.Enterprise Edition)。这个版本以前被称为J2EE.企业版本帮助开发和部署可移植、健壮、可伸缩切安全的服务端Java应用。Java EE是在JavaSE的基础上构建的他提供Web 服务、组建模型、管理和通信API.可以用来实现企业级的面向服务体系结构(service-oriented architecture,SOA)和web2.0应用程序。 Java ME(Java Platform,Micro Edition)。Java ME为在移动设备和嵌入式设备（比如手机、PDA、电视机顶盒和打印机）上运行的应用程序提供一个健壮且灵活的环境。Java ME包括灵活的用户界面、健壮的安全模式、许多内置的网络协议以及对于动态下载的连网和离线应用程序的丰富支持。基于Java ME规范的应用程序只需要编写一次，就可以用于许多设备，而且可以利用每个设备的本级功能。 搭建Java开发环境一般需要同时安装JDK和JRE。 JDK：指Java开发工具包Java Development Kit，开发Java程序时必需，JDK里包含一部分公共JRE。JRE：一个Java运行环境Java Runtime Environment，运行已开发的Java程序时所用。 请按照需求安装，本文选取JavaSE JDK8 进行Windows10环境下的安装演示。 下载安装点击下载链接，进入官网下载页面。依次点击下图中的下载按钮下载JDK。（64位操作系统可安装x86版、x64版，32位操作系统只能安装x86版）。 下载完成后，请自行安装，安装过程中的JDK和JRE的路径请务必记住，在后续的环境配置中需要用到，路径如下图。 配置环境变量Java环境变量涉及到三个名词：JAVA_HOME、path、classpath。 JAVA_HOME代表JDK安装主目录，path代表JDK下可执行文件目录，classpath代表运行java程序时需要查找class文件的目录。 依据上面的安装步骤，应该这样设置： 依次点击“右键我的电脑” -&gt; “属性” -&gt; “高级系统设置” -&gt; “高级” -&gt; “环境变量”，打开环境变量设置窗口。以下各项，有已存在的环境变量，直接编辑其值，切勿全盘覆盖；不存在的自己新建。 JAVA_HOME：D:\DevelopTools\JAVA\JDK path：%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;（注意其中的分号，Windows10有“新建”按钮可忽略分号） classpath：.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;（注意最前面的点代表当前路径，JDK1.5之后classpath可忽略）至此，我们已经完成了Java开发环境的安装和配置。 测试最后，我们来测试一下以上操作是否都已成功生效。打开命令行终端，PowerShell或者CMD等都行。(win+X,A)输入java -version回车、javac等等只要有窗口有类似的输出，即说明我们已经成功了！Congratulations!]]></content>
+    <content type="text"><![CDATA[前言 在Java中，类库以包（package）的形式提供，不同版本的Java提供不同的包，以面向特定的应用。Java2平台包括标准版（J2SE）、企业版（J2EE）和微缩版（J2ME）三个版本。 Java SE(Java Platform,Standard Edition)。JavaSE以前称为J2SE.它允许开发和部署在桌面、服务器、嵌入式环境和实施环境中使用的Java应用程序。JavaSE 包括支持Java Ｗeb服务开发的类，并为Java Platform,Enterprise Edition(Java EE)提供基础。 Java EE(Java Platform.Enterprise Edition)。这个版本以前被称为J2EE.企业版本帮助开发和部署可移植、健壮、可伸缩切安全的服务端Java应用。Java EE是在JavaSE的基础上构建的他提供Web 服务、组建模型、管理和通信API.可以用来实现企业级的面向服务体系结构(service-oriented architecture,SOA)和web2.0应用程序。 Java ME(Java Platform,Micro Edition)。Java ME为在移动设备和嵌入式设备（比如手机、PDA、电视机顶盒和打印机）上运行的应用程序提供一个健壮且灵活的环境。Java ME包括灵活的用户界面、健壮的安全模式、许多内置的网络协议以及对于动态下载的连网和离线应用程序的丰富支持。基于Java ME规范的应用程序只需要编写一次，就可以用于许多设备，而且可以利用每个设备的本级功能。 搭建Java开发环境一般需要同时安装JDK和JRE。 JDK：指Java开发工具包Java Development Kit，开发Java程序时必需，JDK里包含一部分公共JRE。JRE：一个Java运行环境Java Runtime Environment，运行已开发的Java程序时所用。 请按照需求安装，本文选取JavaSE JDK8 进行Windows10环境下的安装演示。 下载安装 点击下载链接，进入官网下载页面。依次点击下图中的下载按钮下载JDK。（64位操作系统可安装x86版、x64版，32位操作系统只能安装x86版）。 下载完成后，请自行安装，安装过程中的JDK和JRE的路径请务必记住，在后续的环境配置中需要用到，路径如下图。 配置环境变量 Java环境变量涉及到三个名词：JAVA_HOME、path、classpath。 JAVA_HOME代表JDK安装主目录，path代表JDK下可执行文件目录，classpath代表运行java程序时需要查找class文件的目录。 依据上面的安装步骤，应该这样设置： 依次点击“右键我的电脑” -&gt; “属性” -&gt; “高级系统设置” -&gt; “高级” -&gt; “环境变量”，打开环境变量设置窗口。以下各项，有已存在的环境变量，直接编辑其值，切勿全盘覆盖；不存在的自己新建。 JAVA_HOME：D:\DevelopTools\JAVA\JDK path：%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;（注意其中的分号，Windows10有“新建”按钮可忽略分号） classpath：.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;（注意最前面的点代表当前路径，JDK1.5之后classpath可忽略）至此，我们已经完成了Java开发环境的安装和配置。 测试 最后，我们来测试一下以上操作是否都已成功生效。打开命令行终端，PowerShell或者CMD等都行。(win+X,A)输入java -version回车、javac等等只要有窗口有类似的输出，即说明我们已经成功了！Congratulations!]]></content>
       <tags>
         <tag>Android</tag>
         <tag>Java</tag>
@@ -12,7 +12,7 @@
   <entry>
     <title><![CDATA[Android开发环境配置]]></title>
     <url>%2F2018%2F11%2F13%2FAndroid%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%2F</url>
-    <content type="text"><![CDATA[写在前面为了便于检索，各小节分篇谈论，请按先后顺序，选择自己需要的部分阅读即可。本文推荐开发IDE使用Android Studio。 目录 Java开发环境配置 Android开发工具包（SDK）安装配置 Android Studio Android模拟器 注意事项]]></content>
+    <content type="text"><![CDATA[写在前面 为了便于检索，各小节分篇谈论，请按先后顺序，选择自己需要的部分阅读即可。本文推荐开发IDE使用Android Studio。 站内链接 Java开发环境配置 Android开发工具包（SDK）安装配置 Android Studio Android模拟器 注意事项]]></content>
       <categories>
         <category>Android</category>
         <category>Android Studio</category>
@@ -39,7 +39,7 @@
   <entry>
     <title><![CDATA[程序员的自我修养]]></title>
     <url>%2F2018%2F11%2F12%2F%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB%2F</url>
-    <content type="text"><![CDATA[写在前面无论是笔试、面试还是日常工作中总是会遇到同步、异步、并行、并发、多线程等等的问题，在做简单的项目的时候也不会过于关心这些感念，只管会用就行，其实仔细想想自己对这些概念其实还是没有完全清晰的认识，说了解也了解，总能说上几句听起来不错的话，但是禁不起刨根问底，尤其是再加上阻塞、非阻塞等概念之后，一时间总感觉信息量太大处理不过来。查看了许多前辈的讲解之后对这些东西也有一些浅薄的理解，现在记录下来，日后忘之也好来寻。 汇总链接计算机网络相关 hexo的next主题个性化教程:打造炫酷网站 操作系统相关hexo的next主题个性化教程:打造炫酷网站 Android相关hexo的next主题个性化教程:打造炫酷网站]]></content>
+    <content type="text"><![CDATA[写在前面无论是笔试、面试还是日常工作中总是会遇到同步、异步、并行、并发、多线程等等的问题，在做简单的项目的时候也不会过于关心这些感念，只管会用就行，其实仔细想想自己对这些概念其实还是没有完全清晰的认识，说了解也了解，总能说上几句听起来不错的话，但是禁不起刨根问底，尤其是再加上阻塞、非阻塞等概念之后，一时间总感觉信息量太大处理不过来。查看了许多前辈的讲解之后对这些东西也有一些浅薄的理解，现在记录下来，日后忘之也好来寻。 汇总链接 计算机网络相关 hexo的next主题个性化教程:打造炫酷网站 操作系统相关hexo的next主题个性化教程:打造炫酷网站 Android相关hexo的next主题个性化教程:打造炫酷网站]]></content>
       <categories>
         <category>程序员的自我修养</category>
       </categories>
