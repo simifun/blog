@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Android Studio安装配置]]></title>
     <url>%2F2018%2F11%2F13%2FAndroid-Studio%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%2F</url>
-    <content type="text"><![CDATA[&gt;&gt;看不清的图片可在新标签打开查看大图]]></content>
+    <content type="text"><![CDATA[&gt;&gt;看不清的图片可在新标签打开查看大图前言 Android SDk你装或者不装都可以进行Android Studio(简称AS)的安装配置。只不过装过SDK的且已经用过Android SDK Manager的同志在进行以下配置之后，可能也许大概会遇见一个问题，你会发现你的SDK Manager.exe程序再也打不开了，双击只会闪退。这并不会影响AS的使用，AS3.0之后完全取消了独立的SDK Manager，将其完全整合到内部，一切操作都可以在AS内部完成！Android SDK在AS内部的配置可以查看Andorid Studio常用功能设置。废话说的有点多，下面正文开始。 下载安装 点击链接下载安装，目前最新版本3.2.0。默认是64位的，如果是要32位的，从“选择其他平台“中找到Windows(32-bit)。 下载完成之后，打开安装包首先会提示你选择要安装的组件，“Android Virtual Device”是Android虚拟机，我这里没有选择安装。初次运行设置 打开软件进行配置，会让你选择1.从现有的文件导入设置。2.不导入设置。这里我们选择默认选项（第二项），点击OK进行下一步。 此时会提示你“访问不到SDK的位置”，此时点击cancel，有时会出现“Finding Available SDK…”提示框，请稍等一会进入第三步。 出现欢迎页面，点击next。 提示选择你想要设置(安装)的类型。1.标准设置2.自定义设置。这里推荐选择第二项自定义设置，进入第5步。(事实证明这一步无论选什么都会进入第五不、第六步)。 选择主题样式。这里笔者比较喜欢暗黑风格:-) 自定义安装设置，Android SDK/Android SDK Platform这两项默认必选。然后设置一个Android SDK的目录，以后在AS中下载的SDk都会放在这个目录；后两项看情况勾选，一个是Intel硬件加速、一个是自带的安卓模拟器。(AS的模拟器有点慢，我没有安装，用模拟器的话可以看看Android模拟器推荐) 最终的确认页面，点击finis，等待安装配置完成。出现这个页面，AS的安装就大功告成了！Congratulations! 相关推荐Android Studio新建or导入第一个工程]]></content>
       <categories>
         <category>Android</category>
         <category>Android Studio</category>
