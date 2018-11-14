@@ -86,22 +86,22 @@
 
 
 
-<meta name="description" content="概念 SDK tools SDK tools即Google官方推出的SDK工具集合，有安装版和解压版。一个纯净的SDk tools目录如下图，此目录就是Android Studio等IDE要配置的SDK根目录，但是此目录还缺少一些东西，需要SDK Manager和AVD Manager去下载安装。以下介绍的都是SDK的子工具包，将所有的子包综合起来就是名副其实的Android SDK(安卓开发工具">
+<meta name="description" content="概念  SDK tools SDK tools即Google官方推出的SDK工具集合，有安装版和解压版。一个纯净的SDk tools目录如下图，此目录就是Android Studio等IDE要配置的SDK根目录，但是此目录还缺少一些东西，需要SDK Manager和AVD Manager去下载安装。以下介绍的都是SDK的子工具包，将所有的子包综合起来就是名副其实的Android SDK(安卓开发工">
 <meta name="keywords" content="Android,开发环境">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android SDK安装配置">
 <meta property="og:url" content="http://yoursite.com/2018/11/14/Android-SDK安装配置/index.html">
 <meta property="og:site_name" content="Simi&#39;s Blog">
-<meta property="og:description" content="概念 SDK tools SDK tools即Google官方推出的SDK工具集合，有安装版和解压版。一个纯净的SDk tools目录如下图，此目录就是Android Studio等IDE要配置的SDK根目录，但是此目录还缺少一些东西，需要SDK Manager和AVD Manager去下载安装。以下介绍的都是SDK的子工具包，将所有的子包综合起来就是名副其实的Android SDK(安卓开发工具">
+<meta property="og:description" content="概念  SDK tools SDK tools即Google官方推出的SDK工具集合，有安装版和解压版。一个纯净的SDk tools目录如下图，此目录就是Android Studio等IDE要配置的SDK根目录，但是此目录还缺少一些东西，需要SDK Manager和AVD Manager去下载安装。以下介绍的都是SDK的子工具包，将所有的子包综合起来就是名副其实的Android SDK(安卓开发工">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2018/11/14/Android-SDK安装配置/1.png">
 <meta property="og:image" content="http://yoursite.com/2018/11/14/Android-SDK安装配置/2.png">
 <meta property="og:image" content="http://yoursite.com/2018/11/14/Android-SDK安装配置/3.png">
-<meta property="og:image" content="http://yoursite.com/2018/11/14/Android-SDK安装配置/6.png">
-<meta property="og:updated_time" content="2018-11-14T06:37:17.188Z">
+<meta property="og:image" content="http://yoursite.com/2018/11/14/Android-SDK安装配置/4.png">
+<meta property="og:updated_time" content="2018-11-14T06:50:53.298Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android SDK安装配置">
-<meta name="twitter:description" content="概念 SDK tools SDK tools即Google官方推出的SDK工具集合，有安装版和解压版。一个纯净的SDk tools目录如下图，此目录就是Android Studio等IDE要配置的SDK根目录，但是此目录还缺少一些东西，需要SDK Manager和AVD Manager去下载安装。以下介绍的都是SDK的子工具包，将所有的子包综合起来就是名副其实的Android SDK(安卓开发工具">
+<meta name="twitter:description" content="概念  SDK tools SDK tools即Google官方推出的SDK工具集合，有安装版和解压版。一个纯净的SDk tools目录如下图，此目录就是Android Studio等IDE要配置的SDK根目录，但是此目录还缺少一些东西，需要SDK Manager和AVD Manager去下载安装。以下介绍的都是SDK的子工具包，将所有的子包综合起来就是名副其实的Android SDK(安卓开发工">
 <meta name="twitter:image" content="http://yoursite.com/2018/11/14/Android-SDK安装配置/1.png">
 
 
@@ -408,7 +408,8 @@
       
 
       
-        <h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><ul>
+        <h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><hr>
+<ul>
 <li><code>SDK tools</code> SDK tools即Google官方推出的SDK工具集合，有安装版和解压版。一个纯净的SDk tools目录如下图，<strong>此目录就是Android Studio等IDE要配置的SDK根目录</strong>，但是此目录还缺少一些东西，需要SDK Manager和AVD Manager去下载安装。以下介绍的都是SDK的子工具包，将所有的子包综合起来就是名副其实的Android SDK(安卓开发工具包)了。<br><img src="/2018/11/14/Android-SDK安装配置/1.png" alt="最初的SDK目录" title="最初的SDK目录"></li>
 <li><code>tools</code> 针对pc平台下使用的工具：比如模拟器，.9patch工具，性能追踪可视化工具traceview；还有Android系统api，针对不同的系统api，对接口和性能做了调整，是Android sdk的核心，所以有时也认为tools就是上面所说的SDK tools（傻傻分不清楚），在SDK Manager中对应图中标记①。</li>
 <li><code>platform-tools</code> 针对pc端和移动端进行交互的一些工具：比如adb工具（通过该工具pc端获取移动端log信息），sqlite3工具（通过该工具查询移动端数据库信息），在SDK Manager中对应图中标记②。</li>
@@ -421,12 +422,14 @@
 <li><code>source</code> 各版本的API源代码，目录下文件命名与platform一致并与其一一对应⑤。</li>
 </ul>
 <p><img src="/2018/11/14/Android-SDK安装配置/3.png" alt="SDK Manager示例2" title="SDK Manager示例2"></p>
-<h1 id="下载安装"><a href="#下载安装" class="headerlink" title="下载安装"></a>下载安装</h1><ol>
+<h1 id="下载安装"><a href="#下载安装" class="headerlink" title="下载安装"></a>下载安装</h1><hr>
+<ol>
 <li><a href="http://tools.android-studio.org/index.php/sdk" target="_blank" rel="noopener">点击下载</a>，Windows系统下有安装版和解压版，选择一种下载。安装版请点击exe程序完成安装，解压版直接解压到一个目录即可。此目录就是Android SDK目录了。</li>
 <li>上面下载的工具包还需要完善一下，接下来打开SDK Manager安装一些Android开发必要的资源。哪些必需安装、哪些不必要安装见下图。  </li>
 </ol>
-<p><strong>&gt;&gt;看不清的图片可在新标签打开查看大图</strong><br><img src="/2018/11/14/Android-SDK安装配置/6.png" alt="SDK必要工具包一览" title="SDK必要工具包一览"></p>
-<h1 id="Android-Studio对SDK根目录的改动"><a href="#Android-Studio对SDK根目录的改动" class="headerlink" title="Android Studio对SDK根目录的改动"></a>Android Studio对SDK根目录的改动</h1><p>有些细心的同学在使用Android Studio编辑工具一段时间后，去手动打开SDK Manager.exe之后会发现它会闪退，怎么都打不开，别慌，这是因为Android Studio对你的sdk目录做了一些改动，尤其是tools目录下的东西。这里大家可以去查看一下这篇博客，有对应的解决方案。</p>
+<p><strong>&gt;&gt;看不清的图片可在新标签打开查看大图</strong><br><img src="/2018/11/14/Android-SDK安装配置/4.png" alt="SDK必要工具包一览" title="SDK必要工具包一览"></p>
+<h1 id="Android-Studio对SDK根目录的改动"><a href="#Android-Studio对SDK根目录的改动" class="headerlink" title="Android Studio对SDK根目录的改动"></a>Android Studio对SDK根目录的改动</h1><hr>
+<p>有些细心的同学在使用Android Studio编辑工具一段时间后，去手动打开SDK Manager.exe之后会发现它会闪退，怎么都打不开，别慌，这是因为Android Studio对你的sdk目录做了一些改动，尤其是tools目录下的东西。这里大家可以去查看一下这篇博客，有对应的解决方案。</p>
 <blockquote>
 <p><a href="https://blog.csdn.net/wang295689649/article/details/60960953" target="_blank" rel="noopener">android SDK SDK Manager.exe 无法打开，一闪而过最终解决办法</a></p>
 </blockquote>
@@ -504,6 +507,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/14/Android-Studio新建-导入第一个工程/" rel="prev" title="Android Studio新建/导入第一个工程">
+                Android Studio新建/导入第一个工程 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -615,7 +622,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -637,7 +644,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
