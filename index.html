@@ -385,7 +385,7 @@
           
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/11/15/Android-Studo制作一个library-moudle/#espandi" rel="contents">
+            <a class="btn" href="/2018/11/15/Android-Studo制作一个library-moudle/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -526,7 +526,7 @@
           
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/11/15/Android模拟器推荐/#espandi" rel="contents">
+            <a class="btn" href="/2018/11/15/Android模拟器推荐/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -667,7 +667,7 @@
           
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/11/15/Android-Studio常见错误处理/#espandi" rel="contents">
+            <a class="btn" href="/2018/11/15/Android-Studio常见错误处理/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -808,7 +808,7 @@
           
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/11/15/Android-Studio常用功能设置/#espandi" rel="contents">
+            <a class="btn" href="/2018/11/15/Android-Studio常用功能设置/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -980,7 +980,7 @@
           <p>终于可以大展身手了！本文着重讲解一下用Android Studio新建、导入工程项目、导入moudle等，可照目录按需查看。-&gt;-&gt;<br></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/11/14/Android-Studio新建-导入第一个工程/#espandi" rel="contents">
+            <a class="btn" href="/2018/11/14/Android-Studio新建-导入第一个工程/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1138,14 +1138,15 @@
 
       
         
-          
-          概念
-
-SDK tools SDK tools即Google官方推出的SDK工具集合，有安装版和解压版。一个纯净的SDk tools目录如下图，此目录就是Android Studio等IDE要配置的SDK根目录，但是此目录还缺少一些东西，需要SDK Manager和AVD Manager去下载安装。
-          ...
+          <h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><hr>
+<ul>
+<li><code>SDK tools</code> SDK tools即Google官方推出的SDK工具集合，有安装版和解压版。一个纯净的SDk tools目录如下图，<strong>此目录就是Android Studio等IDE要配置的SDK根目录</strong>，但是此目录还缺少一些东西，需要SDK Manager和AVD Manager去下载安装。以下介绍的都是SDK的子工具包，将所有的子包综合起来就是名副其实的Android SDK(安卓开发工具集)了。<br><img src="/2018/11/14/Android-SDK安装配置/1.png" alt="最初的SDK目录" title="最初的SDK目录"></li>
+<li><code>tools</code> 针对pc平台下使用的工具：比如模拟器，.9patch工具，性能追踪可视化工具traceview；还有Android系统api，针对不同的系统api，对接口和性能做了调整，是Android sdk的核心，所以有时也认为tools就是上面所说的SDK tools（傻傻分不清楚），在SDK Manager中对应图中标记①。</li>
+<li><code>platform-tools</code> 针对pc端和移动端进行交互的一些工具：比如adb工具（通过该工具pc端获取移动端log信息），sqlite3工具（通过该工具查询移动端数据库信息），在SDK Manager中对应图中标记②。</li>
+<li><code>build tools</code>  aapt工具，aidl工具和打包工具（apkbuilder,dex工具），在SDK Manager中对应图中标记③。</li></ul>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/11/14/Android-SDK安装配置/#espandi" rel="contents">
+            <a class="btn" href="/2018/11/14/Android-SDK安装配置/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1314,13 +1315,11 @@ SDK tools SDK tools即Google官方推出的SDK工具集合，有安装版和解�
 
       
         
-          
-          前言
-Android SDk你装或者不装都可以进行Android Studio(简称AS)的安装配置。只不过装过SDK的且已经用过Android SDK Manager的同志在进行以下配置之后，可能也许大概会遇见一个问题，你会发现你的SDK Manager.exe程序再也打不开了，双击只会闪退。这并
-          ...
+          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><hr>
+<p>Android SDk你装或者不装都可以进行Android Studio(简称AS)的安装配置。<del>只不过装过SDK的且已经用过Android SDK Manager的同志在进行以下配置之后，可能也许大概会遇见一个问题，你会发现你的SDK Manager.exe程序再也打不开了，双击只会闪退</del>。<strong>这并不会影响AS的使用</strong>，AS3.0之后完全取消了独立的SDK Manager，将其完全整合到内部，一切操作都可以在AS内部完成！Android SDK在AS内部的配置可以查看<a href="">Andorid Studio常用功能设置</a>。<br>废话说的有点多，下面正文开始。<br></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/11/13/Android-Studio安装配置/#espandi" rel="contents">
+            <a class="btn" href="/2018/11/13/Android-Studio安装配置/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1486,7 +1485,7 @@ Java SE(Java Platform,Standard Edition)。JavaSE以前称为J
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/11/13/Java开发环境配置/#espandi" rel="contents">
+            <a class="btn" href="/2018/11/13/Java开发环境配置/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1660,7 +1659,7 @@ Java SE(Java Platform,Standard Edition)。JavaSE以前称为J
 <p>为了便于检索，各小节分篇谈论，请按先后顺序，选择自己需要的部分阅读即可。<br>本文推荐开发IDE使用Android Studio。<br></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/11/13/Android开发环境配置/#espandi" rel="contents">
+            <a class="btn" href="/2018/11/13/Android开发环境配置/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1824,7 +1823,7 @@ Java SE(Java Platform,Standard Edition)。JavaSE以前称为J
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/11/12/浅谈同步、异步与阻塞、非阻塞/#espandi" rel="contents">
+            <a class="btn" href="/2018/11/12/浅谈同步、异步与阻塞、非阻塞/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
