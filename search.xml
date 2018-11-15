@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Android Studo制作一个library moudle]]></title>
+    <url>%2F2018%2F11%2F15%2FAndroid-Studo%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AAlibrary-moudle%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Android模拟器推荐]]></title>
+    <url>%2F2018%2F11%2F15%2FAndroid%E6%A8%A1%E6%8B%9F%E5%99%A8%E6%8E%A8%E8%8D%90%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Android Studio常见错误处理]]></title>
+    <url>%2F2018%2F11%2F15%2FAndroid-Studio%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Android Studio常用功能设置]]></title>
+    <url>%2F2018%2F11%2F15%2FAndroid-Studio%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%E8%AE%BE%E7%BD%AE%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[Android Studio新建/导入第一个工程]]></title>
     <url>%2F2018%2F11%2F14%2FAndroid-Studio%E6%96%B0%E5%BB%BA-%E5%AF%BC%E5%85%A5%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%B7%A5%E7%A8%8B%2F</url>
     <content type="text"><![CDATA[终于可以大展身手了！本文着重讲解一下用Android Studio新建、导入工程项目、导入moudle等，可按照目录按需查看。-&gt;-&gt; 新建一个工程目录 直接看图吧，图中有标注，按照步骤来一定错不了。我们的新项目算是建立好了，现在我们来运行一下USB连接手机和电脑，手机在设置里打开“开发者选项”-&gt;“USB调试”。（不同的手机进入开发者选项有所区别，大家自行搜索）点击图中绿色三角图标，在弹出的窗口中选择刚刚连接到电脑的手机，点击ok，静静等候。手机会自动安装上app（有的手机需要手动确认安装），并自动打开。如图，可以看到熟悉的“Hello World!”。 （如果你的三角图标是灰色，请看本章注意事项）大功告成，Android开发已经完全走通了一遍，接下来就看个人的发挥了！大家一起进步呀！。 导入Gradle项目直接在Android Studio的工作页面点击File菜单，选择“New”-&gt;“import project”（当然欢迎页面也有这个选项） 选择你要导入的项目，点击OK，Android Studio会提示我们是在当前窗口打开，还是新建窗口打开，请自行定夺，之后就是等待了，倘若等待过久，一直卡在“Gradle Build Running”请看本章注意事项。 导入moudle当你需要引用别人写好的Android项目中的代码怎么办呢？这里提供三种常用的方案： 1.通过gradle远程依赖下载Jar包，需连外网。gradle依赖可见build.gradle文件中的dependencies {}，implementation/api…等等不做赘述。2.直接导入下载好的Jar包。3.另外就是下载好别人的Android项目，直接离线作为moudle导入。下面详细介绍一下这种导入方式。 导入moudle有两种方式，一是通过AS的工具导入，二是改写配置代码。 AS工具导入 点击File菜单，选择“New”-&gt;“import Moudle”。 选择要导入的moudle目录（若不确定被导入的目录是不是一个正确的mouble，你可以查看本站另一篇文章Android Studo制作一个library moudle）。 打开工程结构窗口，选中当前项目下的主模块（一般默认是app）。切换到dependencies选项卡，点击图中的“+”选择“Module dependency”。 选择moudle，点击ok。成功导入! 代码导入（推荐!!第一种方式的实质就是AS自动生成了代码） 首先打开工程根目录下的setting.gradle，按照下图改写。 打开当前项目下的主模块（一般默认是app）目录下的build.gradle文件，按照下图改写。 导入Eclipse工程导入Eclipse工程，写起来的话，篇幅也很大，这里偷个懒，大家可以去看看这篇博客，写的挺详细的。 Android Studio导入Eclipse项目的两种方法 注意事项 在新建和导入项目的时候，总会不是一帆风顺的，要么久久等候卡着不动、要么这里报错那里报错根本运行不起来……为了解决问题，我们需要打交道的文件总逃不出这几个。下面是笔者收集的一些问题，大家可以对号入座。怎么解决Android studio导入项目卡死Android Studio 编译时提示error please select android sdkandroid studio的sdk所有方法报错，全部红色警告安卓studio升级到3.0后，创建项目时报错]]></content>
@@ -52,9 +72,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Android开发环境配置]]></title>
+    <title><![CDATA[从零开始学Android——Android开发环境搭建]]></title>
     <url>%2F2018%2F11%2F13%2FAndroid%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%2F</url>
-    <content type="text"><![CDATA[&gt;&gt;看不清的图片可在新标签打开查看大图 为了便于检索，各小节分篇谈论，请按先后顺序，选择自己需要的部分阅读即可。本文推荐开发IDE使用Android Studio。 站内链接 Java开发环境配置 Android SDK安装配置(&lt;-IDE用Android Studio的话可以直接看3) Android Studio安装配置(&lt;-无需提前安装Android SDK) Android Studio新建/导入第一个工程 Android Studio常用功能设置 Android Studio常见错误处理 Android模拟器推荐 注意事项]]></content>
+    <content type="text"><![CDATA[&gt;&gt;看不清的图片可在新标签打开查看大图 为了便于检索，各小节分篇谈论，请按先后顺序，选择自己需要的部分阅读即可。本文推荐开发IDE使用Android Studio。 站内链接 Java开发环境配置 Android SDK安装配置(&lt;-IDE用Android Studio的话可以直接看3) Android Studio安装配置(&lt;-无需提前安装Android SDK) Android Studio新建/导入第一个工程 Android Studio常用功能设置 Android Studio常见错误处理 Android模拟器推荐]]></content>
       <categories>
         <category>Android</category>
         <category>Android Studio</category>
