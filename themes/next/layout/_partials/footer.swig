@@ -29,8 +29,8 @@
 {% if theme.footer.powered %}
 <div class="powered-by">
   Hosted by  
-  <a class="theme-link" href="https://pages.coding.me">
-    Coding Pages
+  <a class="theme-link" href="https://pages.github.com">
+    Github Pages
   </a>   
 </div>
   <div class="powered-by">{#

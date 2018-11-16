@@ -37,7 +37,8 @@ copyright: true
   background: rgba(255,255,255,.75) none repeat scroll !important;
 }
 ```
-Tips：这里掌握css的同学应该知道rgba的第四个参数就是改变透明度的，越接近0透明度越高，大家可以自行选择。
+<!-- more -->
+Tips：这里学过css的同学都知道rgba的第四个参数是改变透明度的，越接近0透明度越高，大家可以自行选择。
 之后hexo g，hexo d 打开博客即可看到文章背景板已经变透明了。
 ## 评论区背景色透明
 评论区背景色设置同上 [文章背景色透明](#post-block)，进入同一级目录，打开`index.styl`，与前面不同的是你需要找到`.comment{…}`，同样的在其后插入刚才一样的代码，注意此处插入的样式名是`comment`。

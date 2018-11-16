@@ -79,8 +79,6 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository:
- ##   coding: git@git.coding.net:X-Song/blog.git
-    github: git@github.com:simifun/blog.git
+  repo: git@github.com:simifun/blog.git
   branch: master
 

@@ -1,9 +1,10 @@
 ---
-title: 'Android Studio,记一次难忘的Error: Could not find method ?apply() for arguments'
+title: 'Android Studio,记一次难忘的Error'
 date: 2018-01-31 15:28:06
 tags: 
-  - Could not find method
-  - Gradle DSL method not found
+  - Android
+  - Android Studio
+  - Error
 categories: 
   - Android
   - Android Studio
