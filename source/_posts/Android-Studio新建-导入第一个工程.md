@@ -33,10 +33,10 @@ USB连接手机和电脑，手机在设置里打开“开发者选项”->“USB
 选择你要导入的项目，点击OK，Android Studio会提示我们是在当前窗口打开，还是新建窗口打开，请自行定夺，之后就是等待了，倘若等待过久，一直卡在“Gradle Build Running”请看本章[注意事项](#注意事项)。  
 ![](3-2.png) 
 # 导入moudle
-当你需要引用别人写好的Android项目中的代码怎么办呢？这里提供三种常用的方案：
+当你需要引用别人的library怎么办呢？这里提供三种常用的方案：
 > 1.通过gradle远程依赖下载Jar包，需连外网。gradle依赖可见build.gradle文件中的dependencies {}，implementation/api...等等不做赘述。 
 > 2.直接导入下载好的Jar包。  
-> 3.另外就是下载好别人的Android项目，直接离线作为moudle导入。下面详细介绍一下这种导入方式。  
+> 3.另外就是下载好Android项目，直接离线作为moudle导入。下面详细介绍一下这种导入方式。  
 
 导入moudle有两种方式，一是通过AS的工具导入，二是改写配置代码。
 * AS工具导入
