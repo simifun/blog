@@ -94,10 +94,13 @@
 <meta property="og:site_name" content="Simi&#39;s Blog">
 <meta property="og:description" content="Android开发过程中，我们或多或少会引用第三方library，那如果我想把自己写的Android库公开，为开源做出一点贡献该怎么办呢？一般有两种方式，一种就是制作一个线上依赖：就像我们常用的gradle依赖，complie ‘xxx’（Android Studio 3.0之后建议使用implementation或api等）；另一种就是将要开源的项目做成一个moudle library直接上传到">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-12T09:43:53.011Z">
+<meta property="og:image" content="http://yoursite.com/2018/11/15/Android-Studo制作一个library-moudle/1.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/15/Android-Studo制作一个library-moudle/2.png">
+<meta property="og:updated_time" content="2018-12-13T09:05:37.910Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android Studo制作一个moudle library">
 <meta name="twitter:description" content="Android开发过程中，我们或多或少会引用第三方library，那如果我想把自己写的Android库公开，为开源做出一点贡献该怎么办呢？一般有两种方式，一种就是制作一个线上依赖：就像我们常用的gradle依赖，complie ‘xxx’（Android Studio 3.0之后建议使用implementation或api等）；另一种就是将要开源的项目做成一个moudle library直接上传到">
+<meta name="twitter:image" content="http://yoursite.com/2018/11/15/Android-Studo制作一个library-moudle/1.png">
 
 
 
@@ -414,9 +417,19 @@
       
 
       
-        <p>Android开发过程中，我们或多或少会引用第三方library，那如果我想把自己写的Android库公开，为开源做出一点贡献该怎么办呢？一般有两种方式，一种就是制作一个线上依赖：就像我们常用的gradle依赖，complie ‘xxx’（Android Studio 3.0之后建议使用implementation或api等）；另一种就是将要开源的项目做成一个moudle library直接上传到开源仓库，供别人下载导入，懒人开源，下面简单的介绍一下这种方式。</p>
+        <p>Android开发过程中，我们或多或少会引用第三方library，那如果我想把自己写的Android库公开，为开源做出一点贡献该怎么办呢？一般有两种方式，一种就是制作一个线上依赖：就像我们常用的gradle依赖，complie ‘xxx’（Android Studio 3.0之后建议使用implementation或api等）；另一种就是将要开源的项目做成一个moudle library直接上传到开源仓库，供别人下载导入，懒人开源，下面简单的介绍一下这种方式（开发IDE为Android Studio）。</p>
 <a id="more"></a>
-<p>#</p>
+<p>假设你的Android工程的可执行程序包名是app（默认都是app），你想将这个app改造成一个library供别人使用，首先进入app目录，打开的build.gradle文件（不是工程根目录下的build.gradle文件），找到如图中的两处。<br><img src="/2018/11/15/Android-Studo制作一个library-moudle/1.png" alt="图片描述"></p>
+<ul>
+<li>将apply plugin: ‘com.android.application’修改为apply plugin: ‘com.android.library’。</li>
+<li>将android-&gt;defaultConfig下的applicationId “xxx”删除。</li>
+<li>删除其他不必要的配置，比如打包、签名等。必要的几项如下图。  </li>
+</ul>
+<p><img src="/2018/11/15/Android-Studo制作一个library-moudle/2.png" alt="图片描述"><br>此外，你可以将app目录下的build文件、*.iml等临时文件编译删除，然后将整个app目录从工程中移出去，一个新的moudle就诞生了。</p>
+<blockquote>
+<p>PS：本文中的app目录只是假设举例，你可以自由修改这个目录。</p>
+<p>相关推荐》<a href="https://blog.qsong.fun/2018/11/14/Android-Studio新建-导入第一个工程#导入moudle" target="_blank" rel="noopener">Android Studio导入module</a></p>
+</blockquote>
 
       
     </div>
@@ -617,7 +630,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
