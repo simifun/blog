@@ -41,7 +41,7 @@ USB连接手机和电脑，手机在设置里打开“开发者选项”->“USB
 导入moudle有两种方式，一是通过AS的工具导入，二是改写配置代码。
 * AS工具导入
   1. 点击File菜单，选择“New”->“import Moudle”。
-  2. 选择要导入的moudle目录（若不确定被导入的目录是不是一个正确的mouble，你可以查看本站另一篇文章[Android Studo制作一个library moudle]()）。    
+  2. 选择要导入的moudle目录（若不确定被导入的目录是不是一个正确的mouble，你可以查看本站另一篇文章[Android Studo制作一个library moudle](https://blog.qsong.fun/2018/11/15/Android-Studo%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AAlibrary-moudle/)）。    
   ![](4-1.png) ![](4-2.png)  ![](4-3.png) ![](4-4.png)
   3. 打开工程结构窗口，选中当前项目下的主模块（一般默认是app）。切换到dependencies选项卡，点击图中的“+”选择“Module dependency”。  
   ![](4-5.png)

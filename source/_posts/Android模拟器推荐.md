@@ -20,4 +20,4 @@ categories:
   * [夜神模拟器](https://www.yeshen.com/)
   * [网易mumu](http://mumu.163.com/)
 
-假如你要hierarchyviewerd等SDK tools，请老老实实使用Android Studio配置一个模拟器。（HierarchyViewer是官方推出优化程序的工具之一，可以帮助我们更好地检视和设计用户界面(UI)，绝对是UI检视的利器。）
+假如你要使用hierarchyviewerd等SDK tools的话，请老老实实使用Android Studio配置一个模拟器。（HierarchyViewer是官方推出优化程序的工具之一，可以帮助我们更好地检视和设计UI）
