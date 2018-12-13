@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="同步,异步,阻塞,非阻塞," />
+  <meta name="keywords" content="阻塞,非阻塞,同步,异步," />
 
 
 
@@ -87,14 +87,14 @@
 
 
 <meta name="description" content="同步、异步与阻塞、非阻塞这四个词，程序员们都不陌生，奇怪的是，每次遇见它们，如果你翻阅资料仔细斟酌，就总会有一些新的心得体会。下面将记录一些东西帮助自己更好的理解他们，争取早日彻底吃透它们。 同步与异步同步与异步这两个概念，大多数情况下同步与异步都是关注消息通信机制 (同步通信synchronous communication/异步通信asynchronous communication)。简而言">
-<meta name="keywords" content="同步,异步,阻塞,非阻塞">
+<meta name="keywords" content="阻塞,非阻塞,同步,异步">
 <meta property="og:type" content="article">
 <meta property="og:title" content="浅谈同步、异步与阻塞、非阻塞">
 <meta property="og:url" content="http://yoursite.com/2018/11/12/浅谈同步、异步与阻塞、非阻塞/index.html">
 <meta property="og:site_name" content="Simi&#39;s Blog">
 <meta property="og:description" content="同步、异步与阻塞、非阻塞这四个词，程序员们都不陌生，奇怪的是，每次遇见它们，如果你翻阅资料仔细斟酌，就总会有一些新的心得体会。下面将记录一些东西帮助自己更好的理解他们，争取早日彻底吃透它们。 同步与异步同步与异步这两个概念，大多数情况下同步与异步都是关注消息通信机制 (同步通信synchronous communication/异步通信asynchronous communication)。简而言">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-13T07:20:16.092Z">
+<meta property="og:updated_time" content="2018-12-13T10:15:52.446Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浅谈同步、异步与阻塞、非阻塞">
 <meta name="twitter:description" content="同步、异步与阻塞、非阻塞这四个词，程序员们都不陌生，奇怪的是，每次遇见它们，如果你翻阅资料仔细斟酌，就总会有一些新的心得体会。下面将记录一些东西帮助自己更好的理解他们，争取早日彻底吃透它们。 同步与异步同步与异步这两个概念，大多数情况下同步与异步都是关注消息通信机制 (同步通信synchronous communication/异步通信asynchronous communication)。简而言">
@@ -415,7 +415,7 @@
 </blockquote>
 <p>第一种：前者(排队等候)就是同步等待消息通知，也就是我要一直在等待银行办理业务情况；<br>第二种：后者(等待别人通知)就是异步等待消息通知。在异步消息处理中，等待消息通知者(在这个例子中就是等待办理业务的人)往往注册一个回调机制，在所等待的事件被触发时由触发机制(在这里是柜台的人)通过某种机制(在这里是写在小纸条上的号码，喊号)找到等待该事件的人。（引用自简书，作者：猿码道，<br><a href="https://www.jianshu.com/p/aed6067eeac9" target="_blank" rel="noopener">链接</a>）</p>
 <h1 id="阻塞与非阻塞"><a href="#阻塞与非阻塞" class="headerlink" title="阻塞与非阻塞"></a>阻塞与非阻塞</h1><p>阻塞和非阻塞关注的是<strong>程序在等待调用结果（消息，返回值）时的状态</strong>。同样的，笔者建议初学者在理解阻塞和非阻塞的时候先不要考虑多线程、并发并行什么的，我们只根据等待调用结果时的状态来区分它们！</p>
-<h2 id="概念描述-1"><a href="#概念描述-1" class="headerlink" title="概念描述"></a>概念描述</h2><p>阻塞调用是指调用结果返回之前，当前线程会被挂起。调用线程只有在得到结果之后才会返回。<br>非阻塞调用指在不能立刻得到结果之前，该调用不会阻塞当前线程。（引用自知乎，作者：严肃，<br><a href="https://www.zhihu.com/question/19732473/answer/20851256" target="_blank" rel="noopener">链接</a>）<br>这里说到了线程的概念，这里就简单解释一下，线程是属于进程的，进程是操作系统资源分配的基本单位，程序被装载到内存后，计算机操作系统会为这个程序建立一个运行环境，即创建了一个进程，这个进程有自己独立的代码和数据空间（程序上下文）</p>
+<h2 id="概念描述-1"><a href="#概念描述-1" class="headerlink" title="概念描述"></a>概念描述</h2><p>阻塞调用是指调用结果返回之前，当前线程会被挂起。调用线程只有在得到结果之后才会返回。<br>非阻塞调用指在不能立刻得到结果之前，该调用不会阻塞当前线程。（引用自知乎，作者：严肃，<br><a href="https://www.zhihu.com/question/19732473/answer/20851256" target="_blank" rel="noopener">链接</a>）</p>
 <h2 id="场景比喻-1"><a href="#场景比喻-1" class="headerlink" title="场景比喻"></a>场景比喻</h2><p>继续上面的那个例子，等待者除了等待消息通知之外不能做其它的事情，那么该机制就是阻塞的，表现在程序中,也就是该程序一直阻塞在该函数调用处不能继续往下执行。<br>相反，有的人喜欢在银行办理这些业务的时候一边玩手机聊天看视频一边等待，这样的状态就是非阻塞的，因为他(等待者)没有阻塞在这个消息通知上，而是一边做自己的事情一边等待。不论你是排队还是使用号码等待通知，只要你在等待的时候干了别的事情（比如玩手机）那你就是非阻塞机制，也就是说同步机制可以阻塞也可非阻塞的，异步也是如此。</p>
 <p>但是需要注意了，同步非阻塞形式实际上是效率低下的，想象一下你一边看视频一边还需要抬头看到底队伍排到你了没有。如果把看视频和观察排队的位置看成是程序的两个操作的话，这个程序需要在这两种不同的行为之间来回的切换，效率可想而知是低下的；而异步非阻塞形式却没有这样的问题，因为看视频是你(等待者)的事情，而通知你则是柜台(消息触发机制)的事情，程序没有在两种不同的操作中来回切换。（引用自简书，作者：猿码道，<br><a href="https://www.jianshu.com/p/aed6067eeac9" target="_blank" rel="noopener">链接</a>）</p>
 <h1 id="同步-异步与阻塞-非阻塞"><a href="#同步-异步与阻塞-非阻塞" class="headerlink" title="同步/异步与阻塞/非阻塞"></a>同步/异步与阻塞/非阻塞</h1><p>值得注意的是当我们将同步/异步和阻塞/非阻塞这两组机制放在一起讨论的时候，通常我们都是在思考用何种机制去完成一些耗时的操作，比如本地IO读写、网络请求（Socket请求、Http请求，实质上也是IO）、数据库读写（实质上也是IO）。当我们去搜寻相关资料的过程中会发现，很多前辈都将同步异步、阻塞非阻塞与IO放在一起讨论。这篇文章很好的解决了我的疑问<a href="https://blog.csdn.net/suifeng3051/article/details/52779886" target="_blank" rel="noopener">关于网络IO中的同步、异步、阻塞、非阻塞</a>。</p>
@@ -507,13 +507,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/同步/" rel="tag"># 同步</a>
-          
-            <a href="/tags/异步/" rel="tag"># 异步</a>
-          
             <a href="/tags/阻塞/" rel="tag"># 阻塞</a>
           
             <a href="/tags/非阻塞/" rel="tag"># 非阻塞</a>
+          
+            <a href="/tags/同步/" rel="tag"># 同步</a>
+          
+            <a href="/tags/异步/" rel="tag"># 异步</a>
           
         </div>
       
