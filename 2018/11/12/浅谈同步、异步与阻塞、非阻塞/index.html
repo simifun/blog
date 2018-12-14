@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="Simi&#39;s Blog">
 <meta property="og:description" content="同步、异步与阻塞、非阻塞这四个词，程序员们都不陌生，奇怪的是，每次遇见它们，如果你翻阅资料仔细斟酌，就总会有一些新的心得体会。下面将记录一些东西帮助自己更好的理解他们，争取早日彻底吃透它们。 同步与异步同步与异步这两个概念，大多数情况下同步与异步都是关注消息通信机制 (同步通信synchronous communication/异步通信asynchronous communication)。简而言">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-14T01:22:08.780Z">
+<meta property="og:updated_time" content="2018-12-14T04:14:46.649Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浅谈同步、异步与阻塞、非阻塞">
 <meta name="twitter:description" content="同步、异步与阻塞、非阻塞这四个词，程序员们都不陌生，奇怪的是，每次遇见它们，如果你翻阅资料仔细斟酌，就总会有一些新的心得体会。下面将记录一些东西帮助自己更好的理解他们，争取早日彻底吃透它们。 同步与异步同步与异步这两个概念，大多数情况下同步与异步都是关注消息通信机制 (同步通信synchronous communication/异步通信asynchronous communication)。简而言">
@@ -405,7 +405,7 @@
       
         <p>同步、异步与阻塞、非阻塞这四个词，程序员们都不陌生，奇怪的是，每次遇见它们，如果你翻阅资料仔细斟酌，就总会有一些新的心得体会。下面将记录一些东西帮助自己更好的理解他们，争取早日彻底吃透它们。</p>
 <h1 id="同步与异步"><a href="#同步与异步" class="headerlink" title="同步与异步"></a>同步与异步</h1><p>同步与异步这两个概念，大多数情况下同步与异步都是关注<strong>消息通信机制</strong> (同步通信synchronous communication/异步通信asynchronous communication)。简而言之同步与异步的区分就是看消息通知的差别。笔者建议初学者在理解同步与异步的时候不要考虑什么多线程、并发并行、阻塞非阻塞云云，我们只根据消息通信机制来区分它们！</p>
-<h2 id="概念描述"><a href="#概念描述" class="headerlink" title="概念描述"></a>概念描述</h2><p>所谓同步，就是当前线程在发起一个<strong>调用</strong>时，没有得到结果之前，该<strong>调用</strong>就不返回。一旦调用返回，此线程就得到返回值了。<br>换句话说，就是由<strong>调用者</strong>主动等待这个<strong>调用</strong>的结果。<br>而异步则是相反，<strong>调用</strong>在发出之后，这个<strong>调用</strong>就直接返回了，但并没有返回结果。换句话说，当一个异步过程调用发出后，调用者不会立刻得到结果。而是在<strong>调用</strong>发出后，<strong>被调用者</strong>通过状态、通知来通知调用者，或通过回调函数处理这个调用。（引用自知乎，作者：严肃，<br><a href="https://www.zhihu.com/question/19732473/answer/20851256" target="_blank" rel="noopener">链接</a>）</p>
+<h2 id="概念描述"><a href="#概念描述" class="headerlink" title="概念描述"></a>概念描述</h2><p>所谓同步，就是当前线程在发起一个<strong>调用</strong>时，没有得到结果之前，该<strong>调用</strong>就不返回。一旦调用返回，此线程就得到返回值了。<br>换句话说，就是由<strong>调用者</strong>主动等待这个<strong>调用</strong>的结果。<br><a id="more"></a><br>而异步则是相反，<strong>调用</strong>在发出之后，这个<strong>调用</strong>就直接返回了，但并没有返回结果。换句话说，当一个异步过程调用发出后，调用者不会立刻得到结果。而是在<strong>调用</strong>发出后，<strong>被调用者</strong>通过状态、通知来通知调用者，或通过回调函数处理这个调用。（引用自知乎，作者：严肃，<br><a href="https://www.zhihu.com/question/19732473/answer/20851256" target="_blank" rel="noopener">链接</a>）</p>
 <h2 id="场景比喻"><a href="#场景比喻" class="headerlink" title="场景比喻"></a>场景比喻</h2><p>举个例子，比如我去银行办理业务，可能会有两种方式</p>
 <blockquote>
 <ol>
