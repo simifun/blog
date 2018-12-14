@@ -94,12 +94,12 @@
 <meta property="og:site_name" content="Simi&#39;s Blog">
 <meta property="og:description" content="首先看一下一个很恰当的比喻：    你吃饭吃到一半，电话来了，你一直到吃完了以后才去接，这就说明你不支持并发也不支持并行。你吃饭吃到一半，电话来了，你停了下来接了电话，接完后继续吃饭，这说明你支持并发。你吃饭吃到一半，电话来了，你一边打电话一边吃饭，这说明你支持并行。并发的关键是你有处理多个任务的能力，不一定要同时。并行的关键是你有同时处理多个任务的能力。所以我认为它们最关键的点就是：是否是『同时">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2018/12/14/浅谈并发与并行/1.png">
-<meta property="og:updated_time" content="2018-12-14T04:20:03.761Z">
+<meta property="og:image" content="http://yoursite.com/2018/12/14/浅谈并发与并行/2.png">
+<meta property="og:updated_time" content="2018-12-14T04:23:08.784Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浅谈并发与并行">
 <meta name="twitter:description" content="首先看一下一个很恰当的比喻：    你吃饭吃到一半，电话来了，你一直到吃完了以后才去接，这就说明你不支持并发也不支持并行。你吃饭吃到一半，电话来了，你停了下来接了电话，接完后继续吃饭，这说明你支持并发。你吃饭吃到一半，电话来了，你一边打电话一边吃饭，这说明你支持并行。并发的关键是你有处理多个任务的能力，不一定要同时。并行的关键是你有同时处理多个任务的能力。所以我认为它们最关键的点就是：是否是『同时">
-<meta name="twitter:image" content="http://yoursite.com/2018/12/14/浅谈并发与并行/1.png">
+<meta name="twitter:image" content="http://yoursite.com/2018/12/14/浅谈并发与并行/2.png">
 
 
 
@@ -453,7 +453,7 @@
 </li>
 </ul>
 <blockquote>
-<p><strong>CPU最理想的切换方式</strong>：<br>线程1：准备烧开水（1分钟）+ sleep 1 + sleep 5 + sleep 1 + sleep 2 + 关开水（1分钟）<br>线程2：sleep 1+ sleep 1 + 举杠铃50（5分钟）+ sleep 1 + 举杠铃20（2分钟）+ sleep1 + 举杠铃30下（3分钟）<br>线程3：sleep 1 + 准备洗衣服（1分钟）+ sleep 5 + 关洗衣机（1分钟）<br><img src="/2018/12/14/浅谈并发与并行/1.png" alt=""><br>最后使用了14分钟，耗时与异步是一样的，印证了我曾经引用的一句话“异步是目的，多线程是手段”。但要注意，实际在计算机中执行这些流程耗时不一定正好是14分钟，因为线程不会按照我们设想的去跑。如果线程2举杠铃先跑，整个流程的速度就下来了。</p>
+<p><strong>CPU最理想的切换方式</strong>：<br>线程1：准备烧开水（1分钟）+ sleep 1 + sleep 5 + sleep 1 + sleep 2 + 关开水（1分钟）<br>线程2：sleep 1+ sleep 1 + 举杠铃50（5分钟）+ sleep 1 + 举杠铃20（2分钟）+ sleep1 + 举杠铃30下（3分钟）<br>线程3：sleep 1 + 准备洗衣服（1分钟）+ sleep 5 + 关洗衣机（1分钟）<br><img src="/2018/12/14/浅谈并发与并行/2.png" alt=""><br>最后使用了14分钟，耗时与异步是一样的，印证了我曾经引用的一句话“异步是目的，多线程是手段”。但要注意，实际在计算机中执行这些流程耗时不一定正好是14分钟，因为线程不会按照我们设想的去跑。如果线程2举杠铃先跑，整个流程的速度就下来了。</p>
 </blockquote>
 
       
