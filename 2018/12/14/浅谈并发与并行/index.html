@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Android,Java," />
+  <meta name="keywords" content="并发,并行," />
 
 
 
@@ -86,24 +86,20 @@
 
 
 
-<meta name="description" content="前言 在Java中，类库以包（package）的形式提供，不同版本的Java提供不同的包，以面向特定的应用。Java2平台包括标准版（J2SE）、企业版（J2EE）和微缩版（J2ME）三个版本。  Java SE(Java Platform,Standard Edition)。JavaSE以前称为J2SE.它允许开发和部署在桌面、服务器、嵌入式环境和实施环境中使用的Java应用程序。JavaSE">
-<meta name="keywords" content="Android,Java">
+<meta name="description" content="首先看一下一个很恰当的比喻：    你吃饭吃到一半，电话来了，你一直到吃完了以后才去接，这就说明你不支持并发也不支持并行。你吃饭吃到一半，电话来了，你停了下来接了电话，接完后继续吃饭，这说明你支持并发。你吃饭吃到一半，电话来了，你一边打电话一边吃饭，这说明你支持并行。并发的关键是你有处理多个任务的能力，不一定要同时。并行的关键是你有同时处理多个任务的能力。所以我认为它们最关键的点就是：是否是『同时">
+<meta name="keywords" content="并发,并行">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java开发环境配置">
-<meta property="og:url" content="http://yoursite.com/2018/11/13/Java开发环境配置/index.html">
+<meta property="og:title" content="浅谈并发与并行">
+<meta property="og:url" content="http://yoursite.com/2018/12/14/浅谈并发与并行/index.html">
 <meta property="og:site_name" content="Simi&#39;s Blog">
-<meta property="og:description" content="前言 在Java中，类库以包（package）的形式提供，不同版本的Java提供不同的包，以面向特定的应用。Java2平台包括标准版（J2SE）、企业版（J2EE）和微缩版（J2ME）三个版本。  Java SE(Java Platform,Standard Edition)。JavaSE以前称为J2SE.它允许开发和部署在桌面、服务器、嵌入式环境和实施环境中使用的Java应用程序。JavaSE">
+<meta property="og:description" content="首先看一下一个很恰当的比喻：    你吃饭吃到一半，电话来了，你一直到吃完了以后才去接，这就说明你不支持并发也不支持并行。你吃饭吃到一半，电话来了，你停了下来接了电话，接完后继续吃饭，这说明你支持并发。你吃饭吃到一半，电话来了，你一边打电话一边吃饭，这说明你支持并行。并发的关键是你有处理多个任务的能力，不一定要同时。并行的关键是你有同时处理多个任务的能力。所以我认为它们最关键的点就是：是否是『同时">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2018/11/13/Java开发环境配置/1.png">
-<meta property="og:image" content="http://yoursite.com/2018/11/13/Java开发环境配置/2.png">
-<meta property="og:image" content="http://yoursite.com/2018/11/13/Java开发环境配置/3.png">
-<meta property="og:image" content="http://yoursite.com/2018/11/13/Java开发环境配置/4.png">
-<meta property="og:image" content="http://yoursite.com/2018/11/13/Java开发环境配置/5.png">
-<meta property="og:updated_time" content="2018-11-13T07:56:55.500Z">
+<meta property="og:image" content="http://yoursite.com/2018/12/14/浅谈并发与并行/1.png">
+<meta property="og:updated_time" content="2018-12-14T04:12:37.923Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java开发环境配置">
-<meta name="twitter:description" content="前言 在Java中，类库以包（package）的形式提供，不同版本的Java提供不同的包，以面向特定的应用。Java2平台包括标准版（J2SE）、企业版（J2EE）和微缩版（J2ME）三个版本。  Java SE(Java Platform,Standard Edition)。JavaSE以前称为J2SE.它允许开发和部署在桌面、服务器、嵌入式环境和实施环境中使用的Java应用程序。JavaSE">
-<meta name="twitter:image" content="http://yoursite.com/2018/11/13/Java开发环境配置/1.png">
+<meta name="twitter:title" content="浅谈并发与并行">
+<meta name="twitter:description" content="首先看一下一个很恰当的比喻：    你吃饭吃到一半，电话来了，你一直到吃完了以后才去接，这就说明你不支持并发也不支持并行。你吃饭吃到一半，电话来了，你停了下来接了电话，接完后继续吃饭，这说明你支持并发。你吃饭吃到一半，电话来了，你一边打电话一边吃饭，这说明你支持并行。并发的关键是你有处理多个任务的能力，不一定要同时。并行的关键是你有同时处理多个任务的能力。所以我认为它们最关键的点就是：是否是『同时">
+<meta name="twitter:image" content="http://yoursite.com/2018/12/14/浅谈并发与并行/1.png">
 
 
 
@@ -133,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/11/13/Java开发环境配置/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/12/14/浅谈并发与并行/"/>
 
 
 
 
 
-  <title>Java开发环境配置 | Simi's Blog</title>
+  <title>浅谈并发与并行 | Simi's Blog</title>
   
 
 
@@ -309,7 +305,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/13/Java开发环境配置/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/14/浅谈并发与并行/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Simi">
@@ -326,7 +322,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Java开发环境配置</h1>
+          <h1 class="post-title" itemprop="name headline">浅谈并发与并行</h1>
         
 
         <div class="post-meta">
@@ -338,8 +334,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-13T14:17:59+08:00">
-                2018-11-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-14T08:52:29+08:00">
+                2018-12-14
               </time>
             
 
@@ -361,8 +357,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
+                  <a href="/categories/程序员的自我修养/" itemprop="url" rel="index">
+                    <span itemprop="name">程序员的自我修养</span>
                   </a>
                 </span>
 
@@ -378,7 +374,7 @@
 
           
           
-             <span id="/2018/11/13/Java开发环境配置/" class="leancloud_visitors" data-flag-title="Java开发环境配置">
+             <span id="/2018/12/14/浅谈并发与并行/" class="leancloud_visitors" data-flag-title="浅谈并发与并行">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -409,34 +405,67 @@
       
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a><span id="preface">前言</span></h1><hr>
-<p>在Java中，类库以包（package）的形式提供，不同版本的Java提供不同的包，以面向特定的应用。<br>Java2平台包括标准版（J2SE）、企业版（J2EE）和微缩版（J2ME）三个版本。</p>
+        <p>首先看一下一个很恰当的比喻：  </p>
 <blockquote>
-<p>Java SE(Java Platform,Standard Edition)。JavaSE以前称为J2SE.它允许开发和部署在桌面、服务器、嵌入式环境和实施环境中使用的Java应用程序。JavaSE 包括支持Java　Ｗeb服务开发的类，并为Java Platform,Enterprise Edition(Java EE)提供基础。</p>
-<p>Java EE(Java Platform.Enterprise Edition)。这个版本以前被称为J2EE.企业版本帮助开发和部署可移植、健壮、可伸缩切安全的服务端Java应用。Java EE是在JavaSE的基础上构建的他提供Web 服务、组建模型、管理和通信API.可以用来实现企业级的面向服务体系结构(service-oriented architecture,SOA)和web2.0应用程序。</p>
-<p>Java ME(Java Platform,Micro Edition)。Java ME为在移动设备和嵌入式设备（比如手机、PDA、电视机顶盒和打印机）上运行的应用程序提供一个健壮且灵活的环境。Java ME包括灵活的用户界面、健壮的安全模式、许多内置的网络协议以及对于动态下载的连网和离线应用程序的丰富支持。基于Java ME规范的应用程序只需要编写一次，就可以用于许多设备，而且可以利用每个设备的本级功能。</p>
+<p>你吃饭吃到一半，电话来了，你一直到吃完了以后才去接，这就说明你不支持并发也不支持并行。<br>你吃饭吃到一半，电话来了，你停了下来接了电话，接完后继续吃饭，这说明你支持并发。<br>你吃饭吃到一半，电话来了，你一边打电话一边吃饭，这说明你支持并行。<br><strong>并发</strong>的关键是你有<strong>处理多个任务的能力</strong>，不一定要同时。并行的关键是你有<strong>同时</strong>处理多个任务的能力。所以我认为它们最关键的点就是：是否是『同时』。（来自知乎，作者：之乎用户，<a href="https://www.zhihu.com/question/33515481/answer/58849148" target="_blank" rel="noopener">链接</a>）</p>
 </blockquote>
-<p>搭建Java开发环境一般需要同时安装JDK和JRE。  </p>
+<p>再看一眼权威一点的解释：</p>
 <blockquote>
-<p>JDK：指Java开发工具包Java Development Kit，开发Java程序时必需，JDK里包含一部分公共JRE。<br>JRE：一个Java运行环境Java Runtime Environment，运行已开发的Java程序时所用。</p>
+<p>如果某个系统支持两个或者多个动作（Action）<strong>同时存在</strong>，那么这个系统就是一个<strong>并发系统</strong>。如果某个系统支持两个或者多个动作<strong>同时执行</strong>，那么这个系统就是一个<strong>并行系统</strong>。并发系统与并行系统这两个定义之间的关键差异在于<strong>存在</strong>这个词。<br>在并发程序中可以同时拥有两个或者多个线程。这意味着，如果程序在单核处理器上运行，那么这两个线程将交替地换入或者换出内存。这些线程是同时“存在”的——每个线程都处于执行过程中的某个状态。如果程序能够并行执行，那么就一定是运行在多核处理器上。此时，程序中的每个线程都将分配到一个独立的处理器核上，因此可以同时运行。<br>我相信你已经能够得出结论——“并行”概念是“并发”概念的一个子集。也就是说，你可以编写一个拥有多个线程或者进程的并发程序，但如果没有多核处理器来执行这个程序，那么就不能以并行方式来运行代码。因此，凡是在求解单个问题时涉及多个执行流程的编程模式或者执行行为，都属于并发编程的范畴。摘自：《并发的艺术》 — 〔美〕布雷谢斯。</p>
 </blockquote>
-<p><strong>请按照需求安装，本文选取JavaSE JDK8 进行Windows10环境下的安装演示。</strong></p>
-<h1 id="下载安装"><a href="#下载安装" class="headerlink" title="下载安装"></a><span id="install">下载安装</span></h1><hr>
-<p>点击<a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">下载链接</a>，进入官网下载页面。<br>依次点击下图中的下载按钮下载JDK。（64位操作系统可安装x86版、x64版，32位操作系统只能安装x86版）。<br><img src="/2018/11/13/Java开发环境配置/1.png" alt="">  <img src="/2018/11/13/Java开发环境配置/2.png" alt=""><br>下载完成后，请自行安装，安装过程中的JDK和JRE的路径请务必记住，在后续的环境配置中需要用到，路径如下图。<br><img src="/2018/11/13/Java开发环境配置/3.png" alt="">  <img src="/2018/11/13/Java开发环境配置/4.png" alt=""></p>
-<h1 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a><span id="environment">配置环境变量</span></h1><hr>
-<p>Java环境变量涉及到三个名词：JAVA_HOME、path、classpath。  </p>
-<blockquote>
-<p>JAVA_HOME代表JDK安装主目录，path代表JDK下可执行文件目录，classpath代表运行java程序时需要查找class文件的目录。  </p>
-</blockquote>
-<p>依据上面的安装步骤，应该这样设置：</p>
+<p>对于这个问题，我自己也尝试写过一些答案，不过在仔细斟酌之后还是选择只留下这两段前辈写的话，一个清新脱俗简单易懂，一个言之凿凿令人信服。</p>
+<p>结合之前写的同步异步、阻塞非阻塞，我们可以看一个比较生动的例子：<br>假设我们要做烧开水，举杠铃100下， 洗衣服这3件事情。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">烧开水：准备烧开水（1分钟）， 等开水烧开（8分钟） , 关掉烧水机（1分钟）  </span><br><span class="line">举杠铃100下：举杠铃100下（10分钟）  </span><br><span class="line">洗衣服：准备洗衣服（1分钟）， 等衣服洗完（5分钟），关掉洗衣机（1分钟）</span><br></pre></td></tr></table></figure></p>
+<ol>
+<li>单核处理器</li>
+</ol>
 <ul>
-<li>依次点击“右键我的电脑” -&gt; “属性” -&gt; “高级系统设置” -&gt; “高级” -&gt; “环境变量”，打开环境变量设置窗口。以下各项，有已存在的环境变量，直接编辑其值，切勿全盘覆盖；不存在的自己新建。</li>
-<li>JAVA_HOME：D:\DevelopTools\JAVA\JDK</li>
-<li>path：%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;（<code>注意其中的分号，Windows10有“新建”按钮可忽略分号</code>）</li>
-<li>classpath：.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;（<code>注意最前面的点代表当前路径，JDK1.5之后classpath可忽略</code>）<br>至此，我们已经完成了Java开发环境的安装和配置。</li>
+<li>同步阻塞（非并发）  <blockquote>
+<p>事情步骤安排：烧水：准备烧开水（1分钟）， 等开水烧开（8分钟） , 关掉烧水机（1分钟）；举杠铃100下：举杠铃100下（10分钟）；洗衣服：准备洗衣服（1分钟）， 等衣服洗完（5分钟），关掉洗衣机（1分钟）  </p>
+<blockquote>
+<p><code>做完3件事，花费的时间t = 1+ 8 +1 + 10 + 1+ 5 +1 = 27（分钟）</code></p>
+</blockquote>
+</blockquote>
+</li>
+<li>异步非阻塞（并发）<br>在等待事情执行时，我（单核）可以切换出去，做别的事情。  <blockquote>
+<p>事情步骤安排：准备烧开水(1分钟) + 准备洗衣服(1分钟) + 举50下杠铃 (5分钟)+ 关洗衣机（1分钟） + 举杠铃20下（2分钟）+ 关烧水机（1分钟） + 举30下杠铃(3分钟）<br>在等待衣服洗完（5分钟）时，我（单核）执行举50下杠铃（5分钟）；在等待水烧开（8分钟）时，我（单核）执行举50下杠铃 (5分钟)+ 关洗衣机（1分钟） + 举杠铃20下（2分钟）。  </p>
+<blockquote>
+<p><code>做完3件事，花费的时间t = 1 + 1 + 5 + 1 + 2 + 1 + 3 = 14（分钟）</code></p>
+</blockquote>
+</blockquote>
+</li>
 </ul>
-<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a><span id="test">测试</span></h1><hr>
-<p>最后，我们来测试一下以上操作是否都已成功生效。打开命令行终端，PowerShell或者CMD等都行。(win+X,A)<br>输入<code>java -version</code>回车、<code>javac</code>等等只要有窗口有类似的输出，即说明我们已经成功了！Congratulations!<br><img src="/2018/11/13/Java开发环境配置/5.png" alt=""></p>
+<ol>
+<li>双核处理器</li>
+</ol>
+<ul>
+<li>异步并行  <blockquote>
+<p>核1：准备烧开水（1分钟）+ 举杠铃50下（5分钟）+ 等待（3分钟）+ 关掉烧水机 （1分钟）<br>核2：准备洗衣服（1分钟）+ 举杠铃50下（5分钟）+ 关掉洗衣机（1分钟） + 等待（3分钟）<br>其中，在等待水烧开（8分钟）时，核1执行举杠铃50下（5分钟），等待（3分钟）；在等待衣服洗完（5分钟）时，核2执行举杠铃50下（5分钟）。  </p>
+<blockquote>
+<p><code>做完3件事，花费的时间t = 1 + 5 + 3 + 1 = 10（分钟），其中双核都等待了3分钟。</code></p>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+<p>异步非并行</p>
+<blockquote>
+<p>核1：举杠铃100下（10分钟）<br>核2：准备烧开水（1分钟）+ 准备洗衣服（1分钟）+ 等待（6分钟）+ 关掉烧水机（1分钟）+ 关掉洗衣机（1分钟）<br>其中，在等待水烧开（8分钟）时，核2执行准备烧开水（1分钟），准备洗衣服（1分钟），等待（6分钟）；在等待衣服洗完（5分钟）时，核2执行等待（6分钟）。这里多一句嘴，为什么这里是非并行的？我的理解是，“举杠铃”这一耗时操作在计算机中，是不会一直占用一个cpu核心的，通常cpu只会发号施令告诉这条线程该读写数据了（举杠铃），这个线程则在调用系统IO方法之后等待系统IO读写是否完成的结果的过程中被阻塞，线程所占用的cpu资源立即被释放。所以在本例中，只有在核1发令“举杠铃”的那一刻是并行的，其余时间只有核2在断断续续发号施令，是非并行的，异步主要体现在核1上的线程不会主动等待100下杠铃举完而是进入了休眠，核2上的线程不会主动等待烧开水的结果去洗了衣服，不会主动等待洗衣服的结果进入了休眠，直到这些结果产生时通过往pipe管道写端写入数据来唤醒线程分别占用各自的核心继续工作。</p>
+<blockquote>
+<p><code>做完3件事，花费的时间t =1 + 1 + 6 + 1 + 1 = 10（分钟）</code></p>
+</blockquote>
+</blockquote>
+<p>PS：为了更好的描述上述问题，这里我们默认每个核针对上述任务都只能运行一条线程，事实上，支持超线程的单个核心能并行两个线程。</p>
+<ol>
+<li>多线程</li>
+</ol>
+<ul>
+<li>单核处理器（真单核不支持超线程） <blockquote>
+<p>线程1：准备烧开水（1分钟）， 等水烧开（8分钟） , 关掉烧水机（1分钟）<br>线程2：举杠铃100下（10分钟）<br>线程3：准备洗衣服（1分钟）， 等水烧开（5 分钟） , 关掉洗衣机（1分钟）<br>真单核并不是只能开一条线程，它能开启很多条线程，但是核心并不能同时运行对多线程上的任务，为了达到资源最大化利用它要在线程上来回切换。</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p><strong>CPU最理想的切换方式</strong>：<br>线程1：准备烧开水（1分钟）+ sleep 1 + sleep 5 + sleep 1 + sleep 2 + 关开水（1分钟）<br>线程2：sleep 1+ sleep 1 + 举杠铃50（5分钟）+ sleep 1 + 举杠铃20（2分钟）+ sleep1 + 举杠铃30下（3分钟）<br>线程3：sleep 1 + 准备洗衣服（1分钟）+ sleep 5 + 关洗衣机（1分钟）<br><img src="/2018/12/14/浅谈并发与并行/1.png" alt=""><br>最后使用了14分钟，耗时与异步是一样的，印证了我曾经引用的一句话“异步是目的，多线程是手段”。但要注意，实际在计算机中执行这些流程耗时不一定正好是14分钟，因为线程不会按照我们设想的去跑。如果线程2举杠铃先跑，整个流程的速度就下来了。</p>
+</blockquote>
 
       
     </div>
@@ -487,9 +516,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Android/" rel="tag"># Android</a>
+            <a href="/tags/并发/" rel="tag"># 并发</a>
           
-            <a href="/tags/Java/" rel="tag"># Java</a>
+            <a href="/tags/并行/" rel="tag"># 并行</a>
           
         </div>
       
@@ -502,8 +531,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/13/Android开发环境配置/" rel="next" title="从零开始学Android——Android开发环境搭建">
-                <i class="fa fa-chevron-left"></i> 从零开始学Android——Android开发环境搭建
+              <a href="/2018/11/15/Android-Studo制作一个library-moudle/" rel="next" title="Android Studo制作一个moudle library">
+                <i class="fa fa-chevron-left"></i> Android Studo制作一个moudle library
               </a>
             
           </div>
@@ -511,10 +540,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/11/13/Android-Studio安装配置/" rel="prev" title="Android Studio安装配置">
-                Android Studio安装配置 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -597,17 +622,8 @@ var jiathis_config={
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -699,22 +715,6 @@ var jiathis_config={
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#下载安装"><span class="nav-number">2.</span> <span class="nav-text">下载安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置环境变量"><span class="nav-number">3.</span> <span class="nav-text">配置环境变量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#测试"><span class="nav-number">4.</span> <span class="nav-text">测试</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
