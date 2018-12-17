@@ -43,9 +43,9 @@
       </categories>
       <tags>
         <tag>Android</tag>
+        <tag>模拟器</tag>
         <tag>阻塞</tag>
         <tag>非阻塞</tag>
-        <tag>模拟器</tag>
       </tags>
   </entry>
   <entry>
@@ -147,10 +147,10 @@
         <category>程序员的自我修养</category>
       </categories>
       <tags>
-        <tag>同步</tag>
-        <tag>异步</tag>
         <tag>阻塞</tag>
         <tag>非阻塞</tag>
+        <tag>同步</tag>
+        <tag>异步</tag>
       </tags>
   </entry>
   <entry>
