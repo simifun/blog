@@ -95,7 +95,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2018/12/14/ThreadLocal深入浅出/1.webp">
 <meta property="og:image" content="http://yoursite.com/2018/12/14/ThreadLocal深入浅出/2.png">
-<meta property="og:updated_time" content="2018-12-17T01:34:46.816Z">
+<meta property="og:updated_time" content="2018-12-17T03:31:24.471Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="简单聊聊ThreadLocal">
 <meta name="twitter:description" content="下图为ThreadLocal的内部结构图">
@@ -414,9 +414,10 @@
 <li>首先，<code>ThreadLocal 不是用来解决共享对象的多线程访问问题的</code>，一般情况下，通过ThreadLocal.set() 到线程中的对象是该线程自己使用的对象，其他线程是不需要访问的，也访问不到的。如果ThreadLocal.set()进去的东西本来就是多个线程共享的同一个对象，那么多个线程的ThreadLocal.get()取得的还是这个共享对象本身，还是<code>存在并发访问问题</code>。  </li>
 <li>这里推荐最适合的使用场景是每个线程只声明一个ThreadLocal，清楚了解了ThreadLocal的数据结构之后，可以知道每个线程里的ThreadLocalMap解决Hash冲突的方式并非链表的方式，而是采用线性探测的方式Hash冲突的效率很低，如果有大量不同的ThreadLocal对象放入map中时发送冲突，或者发生二次冲突，则效率很低。<br>所以这里引出的良好建议是：<code>每个线程只创建一个ThreadLocal只存一个变量</code>，如果一个线程要保存多个变量，就需要创建多个ThreadLocal，多个ThreadLocal放入Map中时会极大的增加Hash冲突的可能。</li>
 </ul>
-<h2 id="ThreadLocal引发的内存泄漏"><a href="#ThreadLocal引发的内存泄漏" class="headerlink" title="ThreadLocal引发的内存泄漏"></a>ThreadLocal引发的内存泄漏</h2><p><img src="/2018/12/14/ThreadLocal深入浅出/2.png" alt=""></p>
+<h2 id="ThreadLocal引发的内存泄漏"><a href="#ThreadLocal引发的内存泄漏" class="headerlink" title="ThreadLocal引发的内存泄漏"></a>ThreadLocal引发的内存泄漏</h2><p><img src="/2018/12/14/ThreadLocal深入浅出/2.png" alt=""><br>使用Threadlocal一定要关注一下内存泄漏问题，我的理解是，使用ThreadLocal会有有两个地方可能导致内存泄漏——</p>
 <ul>
-<li>使用Threadlocal一定要关注一下内存泄漏问题，因为当前线程Thread的ThreadLocalMap存储的entity中的key-value键值对中的key是Threadlocal的弱引用，只有当对象实例仅有软引用指向时才会在内存不足时被gc回收，我们一定要记得显示调用Threadlocal.remove()方法，将Entry节点和Map的引用关系移除，这样整个Entry对象在GC Roots分析后就变成不可达了，下次GC的时候就可以被回收。</li>
+<li>一是ThreadLocal对象无法回收引发的内存泄漏，这里ThreadLocal的作者考虑到这一点，将ThreadLocalMap中的Entry对象的key设置为指向ThreadLocal对象的弱引用，只要我们能确保当前线程无需使用ThreadLocal时能够解除对ThreadLocal对象的强引用即可（建议手动将Threadlocal对象的轻引用指向null），在下一次gc时JVM会自动回收只存在一个弱引用的ThreadLocal对象，第一个问题解决。</li>
+<li>二是ThreadLocalMap存储的无用entry无法回收引发的内存泄漏。第二个问题，需要使用者显示调用ThreadLocal.remove()方法，解除ThreadLocalMap对Entry的强引用，如此无用entry就会被正常回收了。</li>
 </ul>
 
       
